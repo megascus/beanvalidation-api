@@ -5,11 +5,8 @@
  * See the license.txt file in the root directory or <http://www.apache.org/licenses/LICENSE-2.0>.
  */
 /**
- * Contains all the Bean Validation provided constraints
- * also called built-in constraints.
+ * すべてのBean Validationには組み込み制約とも呼ばれる提供された制約が含まれています。
  * <p>
- * These constraints do not cover all functional use cases but do represent
- * all the fundamental blocks to express low level constraints on basic JDK
- * types.
+ * これらの制約はすべての機能用途を網羅するわけではありませんが、基本的なJDKの低レベルな制約を表現するすべての基本的な塊を表しています。
  */
 package javax.validation.constraints;
