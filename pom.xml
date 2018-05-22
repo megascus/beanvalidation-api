@@ -222,8 +222,11 @@
                     <windowtitle>Bean Validation API ${project.version}</windowtitle>
                     <bottom>
                         <![CDATA[Copyright &copy; ${project.inceptionYear}-{currentYear} <a href="http://redhat.com">Red Hat Inc.</a>  All Rights Reserved.
-                        Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.]]>
+                        Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.
+                        Translated by <a href="https://twitter.com/megascus" target="_top">@megascus</a>.]]>
                     </bottom>
+                    <reportOutputDirectory>docs</reportOutputDirectory>
+                    <locale>ja_JP</locale>
                 </configuration>
             </plugin>
             <plugin>
