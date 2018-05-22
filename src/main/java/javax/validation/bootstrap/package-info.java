@@ -5,7 +5,8 @@
  * See the license.txt file in the root directory or <http://www.apache.org/licenses/LICENSE-2.0>.
  */
 /**
- * Package containing bootstrap specific objects.
- * Typical users are not interested in these objects.
+ * 自動実行時固有のオブジェクトを含めるパッケージです。
+ * 
+ * 通常のユーザーはこれらのオブジェクトは気にしません。
  */
 package javax.validation.bootstrap;
