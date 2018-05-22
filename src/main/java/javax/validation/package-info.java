@@ -5,29 +5,28 @@
  * See the license.txt file in the root directory or <http://www.apache.org/licenses/LICENSE-2.0>.
  */
 /**
- * Top level package of the Bean Validation API.
+ * 
+ * Bean Validation APIのトップレベルのパッケージです。
  *
- * The main runtime artifacts are:
+ * 主な実行時アーティファクトは以下の通りです。
  * <ul>
- *     <li>{@link javax.validation.Validation}: the entry point to bootstrap Bean Validation</li>
- *     <li>{@link javax.validation.ValidatorFactory}: the bootstrapped Bean Validation engine</li>
- *     <li>{@link javax.validation.Validator}: contract to validate beans and access the metadata</li>
- *     <li>{@link javax.validation.ConstraintViolation}: constraint violation report</li>
+ *     <li>{@link javax.validation.Validation}: Bean Validation自動実行のエントリポイント</li>
+ *     <li>{@link javax.validation.ValidatorFactory}: 自動実行されるBean Validationのエンジン</li>
+ *     <li>{@link javax.validation.Validator}: Beanを検証してメタデータにアクセスする制約</li>
+ *     <li>{@link javax.validation.ConstraintViolation}: 制約違反のレポート</li>
  * </ul>
  *
- * The main constraint definition artifacts are:
+ * 主な制約定義のアーティファクトは以下の通りです。
  * <ul>
- *     <li>{@link javax.validation.Constraint}: annotation marking an annotation as being a constraint</li>
- *     <li>{@link javax.validation.ConstraintValidator}: interface implemented by the piece of code validating
- *     a given constraint</li>
- *     <li>{@link javax.validation.ReportAsSingleViolation}: marks a composed constraint as returning a single
- *     constraint violation report</li>
+ *     <li>{@link javax.validation.Constraint}: アノテーションを制約として設定するアノテーション</li>
+ *     <li>{@link javax.validation.ConstraintValidator}: 指定された制約を検証するコードによって実装されるインタフェース</li>
+ *     <li>{@link javax.validation.ReportAsSingleViolation}: 複合制約を単一の制約違反としてレポートするように指定します</li>
  * </ul>
  *
- * The main constraint declaration artifacts are:
+ * 主な制約宣言のアーティファクトは以下の通りです。
  * <ul>
- *     <li>{@link javax.validation.Valid}: annotation marking an association as cascaded during validation</li>
- *     <li>{@link javax.validation.GroupSequence}: defines a sequence of groups that should be validated sequentially</li>
+ *     <li>{@link javax.validation.Valid}: 関連に検証中にカスケードされることをマークするアノテーション</li>
+ *     <li>{@link javax.validation.GroupSequence}:順番に検証されるべき一連のグループを定義します</li>
  * </ul>
  */
 package javax.validation;
