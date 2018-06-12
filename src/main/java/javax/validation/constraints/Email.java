@@ -24,8 +24,10 @@ import javax.validation.Payload;
 import javax.validation.constraints.Email.List;
 
 /**
- * The string has to be a well-formed email address. Exact semantics of what makes up a valid
- * email address are left to Bean Validation providers. Accepts {@code CharSequence}.
+ * 文字列は整形式の電子メールアドレスでなければなりません。
+ * 
+ * 有効な電子メールアドレスを構成する正確な構文はBean Validationプロバイダに委ねられています。
+ * CharSequenceを受け入れます。
  *
  * @author Emmanuel Bernard
  * @author Hardy Ferentschik
@@ -46,14 +48,12 @@ public @interface Email {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * @return an additional regular expression the annotated element must match. The default
-	 * is any string ('.*')
+	 * @return アノテーションの付けられた要素が一致しなければいけない追加の正規表現。デフォルトの値はすべての文字列です。 ('.*')
 	 */
 	String regexp() default ".*";
 
 	/**
-	 * @return used in combination with {@link #regexp()} in order to specify a regular
-	 * expression option
+         * @return 正規表現オプションを指定するために{@link #regexp()}と組み合わせて使用されます
 	 */
 	Pattern.Flag[] flags() default { };
 
