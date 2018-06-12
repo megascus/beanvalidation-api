@@ -24,8 +24,9 @@ import javax.validation.Payload;
 import javax.validation.constraints.NotBlank.List;
 
 /**
- * The annotated element must not be {@code null} and must contain at least one
- * non-whitespace character. Accepts {@code CharSequence}.
+ * アノテーションの付けられた要素は{@code null}でなく、最低でも1文字以上の空白でない文字を含まなければなりません。
+ * 
+ * {@code CharSequence}も受け付けます。
  *
  * @author Hardy Ferentschik
  * @since 2.0

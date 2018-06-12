@@ -24,8 +24,9 @@ import javax.validation.Payload;
 import javax.validation.constraints.Null.List;
 
 /**
- * The annotated element must be {@code null}.
- * Accepts any type.
+ * アノテーションの付けられた要素は{@code null}である必要があります。
+ * 
+ * いかなる型も受け付けます。
  *
  * @author Emmanuel Bernard
  */
