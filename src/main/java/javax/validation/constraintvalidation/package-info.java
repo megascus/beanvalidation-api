@@ -5,8 +5,9 @@
  * See the license.txt file in the root directory or <http://www.apache.org/licenses/LICENSE-2.0>.
  */
 /**
- * Package containing constructs specific to constraint validators
- * In particular {@link javax.validation.constraintvalidation.SupportedValidationTarget}
- * is used to refine the validation target of a {@link javax.validation.ConstraintValidator}.
+ * 制約バリデーターに固有の構造を含むパッケージ。
+ * 
+ * 特に{@link javax.validation.constraintvalidation.SupportedValidationTarget}は
+ * {@link javax.validation.ConstraintValidator}の検証対象を絞り込むために使用されます。
  */
 package javax.validation.constraintvalidation;
