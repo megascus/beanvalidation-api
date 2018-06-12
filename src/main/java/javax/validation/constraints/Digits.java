@@ -24,17 +24,16 @@ import javax.validation.Payload;
 import javax.validation.constraints.Digits.List;
 
 /**
- * The annotated element must be a number within accepted range
- * Supported types are:
+ * アノテーションの付けられた要素は、許容範囲内の数値でなければなりません。
+ * サポートされる型は
  * <ul>
  *     <li>{@code BigDecimal}</li>
  *     <li>{@code BigInteger}</li>
  *     <li>{@code CharSequence}</li>
- *     <li>{@code byte}, {@code short}, {@code int}, {@code long}, and their respective
- *     wrapper types</li>
+ *     <li>{@code byte}、 {@code short}、 {@code int}、 {@code long}、およびそれらを表すラッパー</li>
  * </ul>
  * <p>
- * {@code null} elements are considered valid.
+ * {@code null} 要素は有効とみなされます。
  *
  * @author Emmanuel Bernard
  */
@@ -52,12 +51,12 @@ public @interface Digits {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * @return maximum number of integral digits accepted for this number
+	 * @return この数値で受け入れられる数の整数部の最大桁数
 	 */
 	int integer();
 
 	/**
-	 * @return maximum number of fractional digits accepted for this number
+	 * @return この数値に対して受け入れられる数の小数部の最大桁数
 	 */
 	int fraction();
 
