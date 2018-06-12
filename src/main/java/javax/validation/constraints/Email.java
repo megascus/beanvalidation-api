@@ -48,7 +48,7 @@ public @interface Email {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * @return アノテーションの付けられた要素が一致しなければいけない追加の正規表現。デフォルトの値はすべての文字列です。 ('.*')
+	 * @return アノテーションの付けられた要素が一致しなければいけない追加の正規表現。デフォルトの値はすべての文字列です ('.*')
 	 */
 	String regexp() default ".*";
 
