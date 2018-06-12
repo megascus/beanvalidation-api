@@ -13,39 +13,35 @@ import javax.validation.ValidationProviderResolver;
 import javax.validation.ValidatorFactory;
 
 /**
- * Defines the state used to bootstrap Bean Validation and
- * creates a provider agnostic {@link Configuration}.
+ * Bean Validationを自動実行するために使用される状態を定義し、プロバイダに依存しない{@link Configuration}を作ります。
  *
  * @author Emmanuel Bernard
  */
 public interface GenericBootstrap {
 
 	/**
-	 * Defines the provider resolution strategy.
-	 * This resolver returns the list of providers evaluated
-	 * to build the {@link Configuration}.
-	 * <p>
-	 * If no resolver is defined, the default {@link ValidationProviderResolver}
-	 * implementation is used.
+         * プロバイダの解決戦略を定義します。
+         * 
+         * このリゾルバーは{@link Configuration}を構築するために評価されたプロバイダのリストを返します。
+         * <p>
+         * リゾルバーが定義されていない場合はデフォルトの{@link ValidationProviderResolver}の実装が使用されます。
 	 *
-	 * @param resolver the {@code ValidationProviderResolver} to use for bootstrapping
-	 * @return {@code this} following the chaining method pattern
+	 * @param resolver 自動実行に使用する {@code ValidationProviderResolver}
+	 * @return 連鎖するメソッドのパターンに従った {@code this}
 	 */
 	GenericBootstrap providerResolver(ValidationProviderResolver resolver);
 
 	/**
-	 * Returns a generic {@link Configuration} implementation.
-	 * At this stage the provider used to build the {@link ValidatorFactory}
-	 * is not defined.
-	 * <p>
-	 * The {@code Configuration} implementation is provided by the first provider
-	 * returned by the {@link ValidationProviderResolver} strategy.
+         * 汎用の {@link Configuration} 実装を返します。
+         * 
+         * この段階では{@link ValidatorFactory}の構築に使用されたプロバイダは定義されていません。
+         * <p>
+         * {@code Configuration}の実装は{@link ValidationProviderResolver}戦略によって返された最初のプロバイダによって提供されます。
 	 *
-	 * @return a {@code Configuration} implementation compliant with the bootstrap state
-	 * @throws NoProviderFoundException if no Bean Validation provider was found
-	 * @throws ValidationException if a Bean Validation provider was found but the
-	 *         {@code Configuration} object cannot be built; this is generally due to an
-	 *         issue with the {@code ValidationProviderResolver}
+	 * @return 自動実行の状態に準拠した{@code Configuration}の実装
+	 * @throws NoProviderFoundException Bean Validationのプロバイダが存在しない場合
+	 * @throws ValidationException if a Bean Validationのプロバイダが見つかったが、 {@code Configuration}オブジェクトが構築できない場合。
+         * これは一般に {@code ValidationProviderResolver}の問題が原因です。
 	 */
 	Configuration<?> configure();
 }
