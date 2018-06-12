@@ -24,11 +24,11 @@ import javax.validation.Payload;
 import javax.validation.constraints.Pattern.List;
 
 /**
- * The annotated {@code CharSequence} must match the specified regular expression.
- * The regular expression follows the Java regular expression conventions
- * see {@link java.util.regex.Pattern}.
+ * アノテーションの付けられた{@code CharSequence}は指定された正規表現と一致しなければなりません。
+ * 正規表現はJavaの正規表現の規則に従います。{@link java.util.regex.Pattern}を参照してください。
  * <p>
- * Accepts {@code CharSequence}. {@code null} elements are considered valid.
+ * {@code CharSequence}を受け付けます。
+ * {@code null}要素は有効とみなされます。
  *
  * @author Emmanuel Bernard
  */
@@ -40,79 +40,79 @@ import javax.validation.constraints.Pattern.List;
 public @interface Pattern {
 
 	/**
-	 * @return the regular expression to match
+	 * @return 一致する正規表現
 	 */
 	String regexp();
 
 	/**
-	 * @return array of {@code Flag}s considered when resolving the regular expression
+	 * @return 正規表現を解決するときに考慮される{@code Flag}の配列
 	 */
 	Flag[] flags() default { };
 
 	/**
-	 * @return the error message template
+	 * @return エラーメッセージのテンプレート
 	 */
 	String message() default "{javax.validation.constraints.Pattern.message}";
 
 	/**
-	 * @return the groups the constraint belongs to
+	 * @return 制約の所属するグループ
 	 */
 	Class<?>[] groups() default { };
 
 	/**
-	 * @return the payload associated to the constraint
+	 * @return 制約に関連付けられたペイロード
 	 */
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Possible Regexp flags.
+         * 可能なRegexpのフラグ。
 	 */
 	public static enum Flag {
 
 		/**
-		 * Enables Unix lines mode.
+                 * Unixライン・モードを有効にします。
 		 *
 		 * @see java.util.regex.Pattern#UNIX_LINES
 		 */
 		UNIX_LINES( java.util.regex.Pattern.UNIX_LINES ),
 
 		/**
-		 * Enables case-insensitive matching.
+		 * 大文字と小文字を区別しないマッチングを有効にします。
 		 *
 		 * @see java.util.regex.Pattern#CASE_INSENSITIVE
 		 */
 		CASE_INSENSITIVE( java.util.regex.Pattern.CASE_INSENSITIVE ),
 
 		/**
-		 * Permits whitespace and comments in pattern.
+		 * パターン内で空白とコメントを使用できるようにします。
 		 *
 		 * @see java.util.regex.Pattern#COMMENTS
 		 */
 		COMMENTS( java.util.regex.Pattern.COMMENTS ),
 
 		/**
-		 * Enables multiline mode.
+		 * 複数行モードを有効にします。
 		 *
 		 * @see java.util.regex.Pattern#MULTILINE
 		 */
 		MULTILINE( java.util.regex.Pattern.MULTILINE ),
 
 		/**
-		 * Enables dotall mode.
+		 * DOTALLモードを有効にします。
 		 *
 		 * @see java.util.regex.Pattern#DOTALL
 		 */
 		DOTALL( java.util.regex.Pattern.DOTALL ),
 
 		/**
-		 * Enables Unicode-aware case folding.
+		 * Unicodeに準拠した大文字と小文字を区別しないマッチングを有効にします。
 		 *
 		 * @see java.util.regex.Pattern#UNICODE_CASE
 		 */
 		UNICODE_CASE( java.util.regex.Pattern.UNICODE_CASE ),
 
 		/**
-		 * Enables canonical equivalence.
+		 * 正規等価を有効にします。
 		 *
 		 * @see java.util.regex.Pattern#CANON_EQ
 		 */
@@ -126,7 +126,7 @@ public @interface Pattern {
 		}
 
 		/**
-		 * @return flag value as defined in {@link java.util.regex.Pattern}
+		 * @return {@link java.util.regex.Pattern}で定義されたフラグの値
 		 */
 		public int getValue() {
 			return value;
