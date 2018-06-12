@@ -27,13 +27,12 @@ import javax.validation.ValidatorFactory;
 import javax.validation.constraints.Past.List;
 
 /**
- * The annotated element must be an instant, date or time in the past.
+ * アノテーションの付けられた要素は過去の時制の型、日付、時間でなければなりません。
  * <p>
- * <i>Now</i> is defined by the {@link ClockProvider} attached to the {@link Validator} or
- * {@link ValidatorFactory}. The default {@code clockProvider} defines the current time
- * according to the virtual machine, applying the current default time zone if needed.
+ * <i>現在</i>は{@link Validator}もしくは{@link ValidatorFactory}に付属する{@link ClockProvider}により定義されます。
+ * デフォルトの{@code clockProvider}は仮想マシンに応じて現在の時刻を定義し、必要に応じて現在のデフォルトのタイムゾーンを適用します。
  * <p>
- * Supported types are:
+ * サポートされる型は
  * <ul>
  *     <li>{@code java.util.Date}</li>
  *     <li>{@code java.util.Calendar}</li>
@@ -53,7 +52,7 @@ import javax.validation.constraints.Past.List;
  *     <li>{@code java.time.chrono.ThaiBuddhistDate}</li>
  * </ul>
  * <p>
- * {@code null} elements are considered valid.
+ * {@code null} 要素は有効とみなされます。
  *
  * @author Emmanuel Bernard
  */
