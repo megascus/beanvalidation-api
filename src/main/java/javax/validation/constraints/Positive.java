@@ -24,18 +24,17 @@ import javax.validation.Payload;
 import javax.validation.constraints.Positive.List;
 
 /**
- * The annotated element must be a strictly positive number (i.e. 0 is considered as an
- * invalid value).
+ * アノテーションの付けられた要素は厳格に正の数でなければなりません。(つまり、0は無効な値とみなされます。)
  * <p>
- * Supported types are:
+ * サポートされる型は
  * <ul>
  *     <li>{@code BigDecimal}</li>
  *     <li>{@code BigInteger}</li>
- *     <li>{@code byte}, {@code short}, {@code int}, {@code long}, {@code float},
- *     {@code double} and their respective wrappers</li>
+ *     <li>{@code byte}、 {@code short}、 {@code int}、 {@code long}、 {@code float}、
+ *     {@code double}、およびそれらを表すラッパー</li>
  * </ul>
  * <p>
- * {@code null} elements are considered valid.
+ * {@code null} 要素は有効とみなされます。
  *
  * @author Gunnar Morling
  * @since 2.0
