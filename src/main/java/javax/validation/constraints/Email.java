@@ -58,7 +58,7 @@ public @interface Email {
 	Pattern.Flag[] flags() default { };
 
 	/**
-	 * Defines several {@code @Email} constraints on the same element.
+         * 同じ要素にいくつかの{@code @Email}アノテーションを定義します。
 	 *
 	 * @see Email
 	 */

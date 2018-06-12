@@ -60,7 +60,7 @@ public @interface Min {
 	long value();
 
 	/**
-	 * Defines several {@link Min} annotations on the same element.
+         * 同じ要素にいくつかの{@link Min}アノテーションを定義します。
 	 *
 	 * @see Min
 	 */

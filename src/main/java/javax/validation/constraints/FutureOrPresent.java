@@ -77,7 +77,7 @@ public @interface FutureOrPresent {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link FutureOrPresent} annotations on the same element.
+         * 同じ要素にいくつかの{@link FutureOrPresent}アノテーションを定義します。
 	 *
 	 * @see FutureOrPresent
 	 */

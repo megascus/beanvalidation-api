@@ -53,7 +53,7 @@ public @interface NegativeOrZero {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link NegativeOrZero} constraints on the same element.
+         * 同じ要素にいくつかの{@link NegativeOrZero}アノテーションを定義します。
 	 *
 	 * @see NegativeOrZero
 	 */

@@ -54,7 +54,7 @@ public @interface Positive {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link Positive} constraints on the same element.
+         * 同じ要素にいくつかの{@link Positive}アノテーションを定義します。
 	 *
 	 * @see Positive
 	 */

@@ -51,7 +51,7 @@ public @interface NotEmpty {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@code @NotEmpty} constraints on the same element.
+         * 同じ要素にいくつかの{@code @NotEmpty}アノテーションを定義します。
 	 *
 	 * @see NotEmpty
 	 */

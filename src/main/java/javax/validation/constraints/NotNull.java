@@ -43,7 +43,7 @@ public @interface NotNull {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link NotNull} annotations on the same element.
+         * 同じ要素にいくつかの{@link NotNull}アノテーションを定義します。
 	 *
 	 * @see javax.validation.constraints.NotNull
 	 */

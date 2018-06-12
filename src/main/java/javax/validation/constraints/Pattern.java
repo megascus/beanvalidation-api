@@ -134,7 +134,7 @@ public @interface Pattern {
 	}
 
 	/**
-	 * Defines several {@link Pattern} annotations on the same element.
+         * 同じ要素にいくつかの{@link Pattern}アノテーションを定義します。
 	 *
 	 * @see Pattern
 	 */

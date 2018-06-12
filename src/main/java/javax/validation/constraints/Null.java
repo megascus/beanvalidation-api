@@ -43,7 +43,7 @@ public @interface Null {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link Null} annotations on the same element.
+         * 同じ要素にいくつかの{@link Null}アノテーションを定義します。
 	 *
 	 * @see javax.validation.constraints.Null
 	 */

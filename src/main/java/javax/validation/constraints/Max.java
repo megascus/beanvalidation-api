@@ -60,7 +60,7 @@ public @interface Max {
 	long value();
 
 	/**
-	 * Defines several {@link Max} annotations on the same element.
+         * 同じ要素にいくつかの{@link Max}アノテーションを定義します。
 	 *
 	 * @see Max
 	 */

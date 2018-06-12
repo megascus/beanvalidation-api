@@ -62,7 +62,7 @@ public @interface Size {
 	int max() default Integer.MAX_VALUE;
 
 	/**
-	 * Defines several {@link Size} annotations on the same element.
+         * 同じ要素にいくつかの{@link Size}アノテーションを定義します。
 	 *
 	 * @see Size
 	 */

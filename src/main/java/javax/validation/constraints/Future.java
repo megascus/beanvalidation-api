@@ -71,7 +71,7 @@ public @interface Future {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link Future} annotations on the same element.
+         * 同じ要素にいくつかの{@link Future}アノテーションを定義します。
 	 *
 	 * @see Future
 	 */

@@ -77,7 +77,7 @@ public @interface PastOrPresent {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link PastOrPresent} annotations on the same element.
+         * 同じ要素にいくつかの{@link PastOrPresent}アノテーションを定義します。
 	 *
 	 * @see PastOrPresent
 	 */

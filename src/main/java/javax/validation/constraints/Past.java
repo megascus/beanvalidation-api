@@ -71,7 +71,7 @@ public @interface Past {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link Past} annotations on the same element.
+         * 同じ要素にいくつかの{@link Past}アノテーションを定義します。
 	 *
 	 * @see Past
 	 */
