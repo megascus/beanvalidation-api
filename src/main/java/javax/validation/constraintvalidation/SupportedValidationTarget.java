@@ -15,18 +15,14 @@ import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * Defines the target(s) a {@link ConstraintValidator} can validate.
+ * {@link ConstraintValidator}の検証できる対象を定義します。
  * <p>
- * A {@code ConstraintValidator} can target the (returned) element
- * annotated by the constraint, the array of parameters of a method
- * or constructor (aka cross-parameter) or both.
+ * {@code ConstraintValidator}は制約によってアノテーションの付けられた(返された)要素、
+ * メソッドまたはコンストラクタのパラメーターの配列(別名クロスパラメーター)、もしくはその両方を対象にできます。
  * <p>
- * If {@code @SupportedValidationTarget} is not present, the
- * {@code ConstraintValidator} targets the (returned) element annotated
- * by the constraint.
+ * {@code @SupportedValidationTarget}が存在しない場合、{@code ConstraintValidator}は制約によってアノテーションの付けられた(返された)要素を対象にします。
  * <p>
- * A {@code ConstraintValidator} targeting cross-parameter must accept
- * {@code Object[]} (or {@code Object}) as the type of object it validates.
+ * クロスパラメーターを対象とする{@code ConstraintValidator}は検証するオブジェクトの型として{@code Object[]}(もしくは{@code Object})を受け入れる必要があります。
  *
  * @author Emmanuel Bernard
  * @since 1.1
