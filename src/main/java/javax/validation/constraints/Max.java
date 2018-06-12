@@ -24,20 +24,18 @@ import javax.validation.Payload;
 import javax.validation.constraints.Max.List;
 
 /**
- * The annotated element must be a number whose value must be lower or
- * equal to the specified maximum.
+ * アノテーションの付けられた要素は値が指定された最大値以下の数値でなければなりません。
  * <p>
- * Supported types are:
+ * サポートされる型は
  * <ul>
  *     <li>{@code BigDecimal}</li>
  *     <li>{@code BigInteger}</li>
- *     <li>{@code byte}, {@code short}, {@code int}, {@code long}, and their respective
- *     wrappers</li>
+ *     <li>{@code byte}、 {@code short}、 {@code int}、 {@code long}、およびそれらを表すラッパー</li>
  * </ul>
- * Note that {@code double} and {@code float} are not supported due to rounding errors
- * (some providers might provide some approximative support).
+ * 丸め誤差のため{@code double}と{@code float}はサポートされていないことに注意してください。
+ * (一部のプロバイダは近似的なサポートを提供するかもしれません)
  * <p>
- * {@code null} elements are considered valid.
+ * {@code null} 要素は有効とみなされます。
  *
  * @author Emmanuel Bernard
  */
@@ -55,7 +53,7 @@ public @interface Max {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * @return value the element must be lower or equal to
+	 * @return 要素が以下でなければいけない値
 	 */
 	long value();
 
