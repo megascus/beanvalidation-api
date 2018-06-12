@@ -24,17 +24,17 @@ import javax.validation.Payload;
 import javax.validation.constraints.Size.List;
 
 /**
- * The annotated element size must be between the specified boundaries (included).
+ * アノテーションの付けられた要素のサイズは指定された境界値(境界値を含む)の間でなければなりません。
  * <p>
- * Supported types are:
+ * サポートされる型は
  * <ul>
- *     <li>{@code CharSequence} (length of character sequence is evaluated)</li>
- *     <li>{@code Collection} (collection size is evaluated)</li>
- *     <li>{@code Map} (map size is evaluated)</li>
- *     <li>Array (array length is evaluated)</li>
+ *     <li>{@code CharSequence} (文字列の長さが評価されます)</li>
+ *     <li>{@code Collection} (コレクションの要素数が評価されます)</li>
+ *     <li>{@code Map} (マップの要素数が評価されます)</li>
+ *     <li>配列 (配列の長さが評価されます)</li>
  * </ul>
  * <p>
- * {@code null} elements are considered valid.
+ * {@code null} 要素は有効とみなされます。
  *
  * @author Emmanuel Bernard
  */
@@ -52,12 +52,12 @@ public @interface Size {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * @return size the element must be higher or equal to
+	 * @return 要素が以上でなければならないサイズ
 	 */
 	int min() default 0;
 
 	/**
-	 * @return size the element must be lower or equal to
+	 * @return 要素が以下でなければならないサイズ
 	 */
 	int max() default Integer.MAX_VALUE;
 
