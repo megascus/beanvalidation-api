@@ -40,7 +40,7 @@ public interface GenericBootstrap {
 	 *
 	 * @return 自動実行の状態に準拠した{@code Configuration}の実装
 	 * @throws NoProviderFoundException Bean Validationのプロバイダが存在しない場合
-	 * @throws ValidationException if a Bean Validationのプロバイダが見つかったが、 {@code Configuration}オブジェクトが構築できない場合。
+	 * @throws ValidationException Bean Validationのプロバイダが見つかったが、 {@code Configuration}オブジェクトが構築できない場合。
          * これは一般に {@code ValidationProviderResolver}の問題が原因です。
 	 */
 	Configuration<?> configure();

@@ -12,44 +12,39 @@ import javax.validation.ValidationProviderResolver;
 import javax.validation.spi.ValidationProvider;
 
 /**
- * Defines the state used to bootstrap Bean Validation and
- * creates a provider specific {@link Configuration}
- * of type {@code T}.
+ * Bean Validationの自動起動に使用される状態を定義し、プロバイダ固有の{@code T}型の{@link Configuration}を作ります。
+ * 
  * <p>
- * The specific {@code Configuration} is linked to the provider via the generic
- * parameter of the {@link ValidationProvider} implementation.
+ * 個別の{@code Configuration}は{@link ValidationProvider}の実装の汎用パラメーターを介してプロバイダにリンクされています。
  * <p>
- * The requested provider is the first provider instance assignable to
- * the requested provider type (known when {@link ProviderSpecificBootstrap} is built).
- * The list of providers evaluated is returned by {@link ValidationProviderResolver}.
- * If no {@code ValidationProviderResolver} is defined, the
- * default {@code ValidationProviderResolver} strategy is used.
+ * 要求されたプロバイダは({@link ProviderSpecificBootstrap}の構築時に知られる)要求されたプロバイダの型に割り当てることが出来る最初のプロバイダです。
+ * 評価されたプロバイダのリストは{@link ValidationProviderResolver}によって返されます。
+ * {@code ValidationProviderResolver}が定義されていない場合、デフォルトの{@code ValidationProviderResolver}戦略が使用されます。
  *
- * @param <T> the provider specific {@link Configuration} type
+ * @param <T> プロバイダ固有の{@link Configuration}型
  *
  * @author Emmanuel Bernard
  */
 public interface ProviderSpecificBootstrap<T extends Configuration<T>> {
 
 	/**
-	 * Optionally defines the provider resolver implementation used.
-	 * If not defined, use the default {@link ValidationProviderResolver}
+         * オプションで使用されるプロバイダのリゾルバー実装を定義します。 
+         * 定義されていない場合はデフォルトの{@link ValidationProviderResolver}を使用します。
 	 *
-	 * @param resolver {@code ValidationProviderResolver} implementation used
+	 * @param resolver 使用される{@code ValidationProviderResolver}の実装
 	 *
-	 * @return {@code this} following the chaining method pattern
+	 * @return 連鎖するメソッドのパターンに従った {@code this}
 	 */
 	public ProviderSpecificBootstrap<T> providerResolver(
 			ValidationProviderResolver resolver);
 
 	/**
-	 * Determines the provider implementation suitable for {@code T} and delegates
-	 * the creation of this specific {@link Configuration} subclass to the provider.
+         * {@code T}に適したプロバイダの実装を決定し、この個別の{@link Configuration}のサブクラスの構築をプロバイダに委譲します。
 	 *
-	 * @return {@code Configuration} sub interface implementation
+	 * @return {@code Configuration}のサブインターフェースの実装
 	 *
-	 * @throws ValidationException if the {@code Configuration} object cannot be built;
-	 *         this is generally due to an issue with the {@code ValidationProviderResolver}
+	 * @throws ValidationException {@code Configuration}オブジェクトが構築できない場合。
+         * これは一般に {@code ValidationProviderResolver}の問題が原因です。
 	 */
 	public T configure();
 }
