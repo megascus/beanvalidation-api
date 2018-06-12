@@ -24,21 +24,19 @@ import javax.validation.Payload;
 import javax.validation.constraints.DecimalMin.List;
 
 /**
- * The annotated element must be a number whose value must be higher or
- * equal to the specified minimum.
+ * アノテーションの付けられた要素は値が指定された最小値以上の数値でなければなりません。
  * <p>
- * Supported types are:
+ * サポートされる型は
  * <ul>
  *     <li>{@code BigDecimal}</li>
  *     <li>{@code BigInteger}</li>
  *     <li>{@code CharSequence}</li>
- *     <li>{@code byte}, {@code short}, {@code int}, {@code long}, and their respective
- *     wrappers</li>
+ *     <li>{@code byte}、 {@code short}、 {@code int}、 {@code long}、およびそれらを表すラッパー</li>
  * </ul>
- * Note that {@code double} and {@code float} are not supported due to rounding errors
- * (some providers might provide some approximative support).
+ * 丸め誤差のため{@code double}と{@code float}はサポートされていないことに注意してください。
+ * (一部のプロバイダは近似的なサポートを提供するかもしれません)
  * <p>
- * {@code null} elements are considered valid.
+ * {@code null} 要素は有効とみなされます。
  *
  * @author Emmanuel Bernard
  */
@@ -56,26 +54,25 @@ public @interface DecimalMin {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * The {@code String} representation of the min value according to the
-	 * {@code BigDecimal} string representation.
+         * {@code BigDecimal}文字列表現による最小値の{@code String}表現です。
 	 *
-	 * @return value the element must be higher or equal to
+	 * @return 要素がそれ以上である必要がある値
 	 */
 	String value();
 
 	/**
-	 * Specifies whether the specified minimum is inclusive or exclusive.
-	 * By default, it is inclusive.
+         * 最大値の境界値が含まれるか含まれないかを指定します。
+         * 
+         * デフォルトでは境界値は含まれます。
 	 *
-	 * @return {@code true} if the value must be higher or equal to the specified minimum,
-	 *         {@code false} if the value must be higher
-	 *
+	 * @return 指定された最小値以上である必要がある場合は{@code true}、超えている必要がある場合は{@code false}
+         * 
 	 * @since 1.1
 	 */
 	boolean inclusive() default true;
 
 	/**
-	 * Defines several {@link DecimalMin} annotations on the same element.
+         * 同じ要素にいくつかの{@link DecimalMin}アノテーションを定義します。
 	 *
 	 * @see DecimalMin
 	 */

@@ -24,10 +24,11 @@ import javax.validation.Payload;
 import javax.validation.constraints.AssertTrue.List;
 
 /**
- * The annotated element must be true.
- * Supported types are {@code boolean} and {@code Boolean}.
+ * アノテーションの付けられた要素はtrueである必要があります。
+ * 
+ * サポートする型は{@code boolean}と{@code Boolean}です。
  * <p>
- * {@code null} elements are considered valid.
+ * {@code null} 要素は有効とみなされます。
  *
  * @author Emmanuel Bernard
  */
@@ -45,7 +46,7 @@ public @interface AssertTrue {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-	 * Defines several {@link AssertTrue} annotations on the same element.
+         * 同じ要素にいくつかの{@link AssertTrue}アノテーションを定義します。
 	 *
 	 * @see AssertTrue
 	 */
