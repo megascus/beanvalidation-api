@@ -9,7 +9,8 @@ package javax.validation.constraintvalidation;
 import javax.validation.ConstraintValidator;
 
 /**
- * List of possible targets for a {@link ConstraintValidator}.
+ * 
+ * {@link ConstraintValidator}の有効な対象のリスト。
  *
  * @author Emmanuel Bernard
  * @since 1.1
@@ -17,12 +18,12 @@ import javax.validation.ConstraintValidator;
 public enum ValidationTarget {
 
 	/**
-	 * (Returned) element annotated by the constraint.
+	 * (返された) 制約によってアノテーションの付けられた要素。
 	 */
 	ANNOTATED_ELEMENT,
 
 	/**
-	 * Array of parameters of the annotated method or constructor (aka cross-parameter).
+	 * アノテーションの付けられたメソッドまたはコンストラクタのパラメーターの配列(別名クロスパラメーター)。
 	 */
 	PARAMETERS
 }
