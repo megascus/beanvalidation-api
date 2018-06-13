@@ -63,10 +63,11 @@ import javax.validation.ValidationException;
 public @interface ValidateOnExecution {
 
 	/**
-	 * List of executable types to be validated when called.
-	 * Defaults to the types discovered implicitly (see {@link ExecutableType#IMPLICIT}).
+	 * 呼び出し時に検証される実行可能な型のリスト。
+	 * 
+	 * 規定値は暗黙的に検出された型です。({@link ExecutableType#IMPLICIT}を参照)
 	 *
-	 * @return array of {@code ExecutableType}s to be validated
+	 * @return 検証される{@code ExecutableType}の配列
 	 */
 	ExecutableType[] type() default {ExecutableType.IMPLICIT};
 }

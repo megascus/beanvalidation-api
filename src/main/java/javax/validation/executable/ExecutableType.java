@@ -7,7 +7,7 @@
 package javax.validation.executable;
 
 /**
- * Defines the types of executables targeted by an operation.
+ * 操作による実行対象の型の定義です。
  *
  * @author Emmanuel Bernard
  * @since 1.1
