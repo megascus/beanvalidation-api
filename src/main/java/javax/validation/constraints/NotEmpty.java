@@ -53,7 +53,7 @@ public @interface NotEmpty {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-         * 同じ要素にいくつかの{@code @NotEmpty}アノテーションを定義します。
+         * 同じ要素に複数の{@code @NotEmpty}アノテーションを定義します。
 	 *
 	 * @see NotEmpty
 	 */

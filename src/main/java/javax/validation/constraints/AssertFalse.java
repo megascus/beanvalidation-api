@@ -46,7 +46,7 @@ public @interface AssertFalse {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-         * 同じ要素にいくつかの{@link AssertFalse}アノテーションを定義します。
+         * 同じ要素に複数の{@link AssertFalse}アノテーションを定義します。
 	 *
 	 * @see javax.validation.constraints.AssertFalse
 	 */

@@ -47,7 +47,7 @@ public @interface NotBlank {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-         * 同じ要素にいくつかの{@code @NotBlank}アノテーションを定義します。
+         * 同じ要素に複数の{@code @NotBlank}アノテーションを定義します。
 	 *
 	 * @see NotBlank
 	 */

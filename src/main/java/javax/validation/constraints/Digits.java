@@ -61,7 +61,7 @@ public @interface Digits {
 	int fraction();
 
 	/**
-         * 同じ要素にいくつかの{@link Digits}アノテーションを定義します。
+         * 同じ要素に複数の{@link Digits}アノテーションを定義します。
 	 *
 	 * @see Digits
 	 */

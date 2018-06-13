@@ -58,7 +58,7 @@ public @interface Max {
 	long value();
 
 	/**
-         * 同じ要素にいくつかの{@link Max}アノテーションを定義します。
+         * 同じ要素に複数の{@link Max}アノテーションを定義します。
 	 *
 	 * @see Max
 	 */

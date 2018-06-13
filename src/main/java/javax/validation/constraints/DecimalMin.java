@@ -72,7 +72,7 @@ public @interface DecimalMin {
 	boolean inclusive() default true;
 
 	/**
-         * 同じ要素にいくつかの{@link DecimalMin}アノテーションを定義します。
+         * 同じ要素に複数の{@link DecimalMin}アノテーションを定義します。
 	 *
 	 * @see DecimalMin
 	 */

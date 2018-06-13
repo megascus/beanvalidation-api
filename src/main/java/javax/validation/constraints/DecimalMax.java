@@ -72,7 +72,7 @@ public @interface DecimalMax {
 	boolean inclusive() default true;
 
 	/**
-         * 同じ要素にいくつかの{@link DecimalMax}アノテーションを定義します。
+         * 同じ要素に複数の{@link DecimalMax}アノテーションを定義します。
 	 *
 	 * @see DecimalMax
 	 */

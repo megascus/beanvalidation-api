@@ -62,7 +62,7 @@ public @interface Size {
 	int max() default Integer.MAX_VALUE;
 
 	/**
-         * 同じ要素にいくつかの{@link Size}アノテーションを定義します。
+         * 同じ要素に複数の{@link Size}アノテーションを定義します。
 	 *
 	 * @see Size
 	 */

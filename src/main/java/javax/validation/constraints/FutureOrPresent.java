@@ -74,7 +74,7 @@ public @interface FutureOrPresent {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-         * 同じ要素にいくつかの{@link FutureOrPresent}アノテーションを定義します。
+         * 同じ要素に複数の{@link FutureOrPresent}アノテーションを定義します。
 	 *
 	 * @see FutureOrPresent
 	 */

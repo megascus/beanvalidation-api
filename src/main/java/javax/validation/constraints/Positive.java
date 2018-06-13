@@ -53,7 +53,7 @@ public @interface Positive {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-         * 同じ要素にいくつかの{@link Positive}アノテーションを定義します。
+         * 同じ要素に複数の{@link Positive}アノテーションを定義します。
 	 *
 	 * @see Positive
 	 */

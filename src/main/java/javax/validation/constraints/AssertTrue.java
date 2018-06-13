@@ -46,7 +46,7 @@ public @interface AssertTrue {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-         * 同じ要素にいくつかの{@link AssertTrue}アノテーションを定義します。
+         * 同じ要素に複数の{@link AssertTrue}アノテーションを定義します。
 	 *
 	 * @see AssertTrue
 	 */

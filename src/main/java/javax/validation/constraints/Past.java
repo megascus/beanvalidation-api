@@ -70,7 +70,7 @@ public @interface Past {
 	Class<? extends Payload>[] payload() default { };
 
 	/**
-         * 同じ要素にいくつかの{@link Past}アノテーションを定義します。
+         * 同じ要素に複数の{@link Past}アノテーションを定義します。
 	 *
 	 * @see Past
 	 */
