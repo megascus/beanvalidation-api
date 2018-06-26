@@ -9,15 +9,12 @@ package javax.validation;
 import java.time.Clock;
 
 /**
- * Contract for obtaining the {@link Clock} used as the reference for {@code now} when
- * validating the {@code @Future} and {@code @Past} constraints.
+ * {@code @Future} 制約と {@code @Past}制約を検証するときに、 "現在"への参照として使用されている{@link Clock}を取得するための契約です。
  * <p>
- * The default implementation will return the current system time. Plugging in custom
- * implementations may be useful for instance in batch applications which need to run with a
- * specific logical date, e.g. with yesterday's date when re-running a failed batch job
- * execution.
+ * デフォルト実装では現在のシステム時刻を返します。
+ * カスタム実装を差し込むことは、特定の論理日付で実行する必要のあるバッチアプリケーション(たとえば、昨日失敗したバッチジョブを再実行するとき)で有用です。
  * <p>
- * Implementations must be safe for access from several threads at the same time.
+ * 実装はスレッドセーフである必要があります。
  *
  * @author Gunnar Morling
  * @author Guillaume Smet
@@ -26,10 +23,9 @@ import java.time.Clock;
 public interface ClockProvider {
 
 	/**
-	 * Returns the clock which serves as the reference for {@code now}.
+         * "現在"への参照として機能する時計を返します。
 	 *
-	 * @return the clock which serves as the reference for {@code now}; must not be
-	 * {@code null}
+	 * @return "現在"への参照として機能する時計、{@code null}であってはなりません
 	 */
 	Clock getClock();
 }
