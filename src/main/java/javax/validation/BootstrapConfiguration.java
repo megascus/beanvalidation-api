@@ -15,12 +15,10 @@ import javax.validation.spi.ValidationProvider;
 import javax.validation.valueextraction.ValueExtractor;
 
 /**
- * Represents the user specified default configuration in
- * {@code META-INF/validation.xml}.
+ * {@code META-INF/validation.xml} でユーザーが指定したデフォルトの構成を表します。
  * <p>
- * Note that modifications to the returned objects do not have any effect.
- * Instead use the methods provided on {@link Configuration} in order to
- * apply modifications to the configuration.
+ * 返されるオブジェクトへの変更は何も効果のないことに注意してください。
+ * 代わりに{@link Configuration}に変更を適用するために{@link Configuration}で提供されているメソッドを使用します。
  *
  * @author Emmanuel Bernard
  * @author Gunnar Morling
@@ -31,95 +29,88 @@ import javax.validation.valueextraction.ValueExtractor;
 public interface BootstrapConfiguration {
 
 	/**
-	 * Class name of the {@link ValidationProvider} implementation
-	 * or {@code null} if none is specified.
+         * {@link ValidationProvider}の実装のクラス名、指定されていない場合は{@code null}。
 	 *
-	 * @return validation provider class name
+	 * @return 検証プロバイダのクラス名
 	 */
 	String getDefaultProviderClassName();
 
 	/**
-	 * Class name of the {@link ConstraintValidatorFactory} implementation
-	 * or {@code null} if none is specified.
+         * {@link ConstraintValidatorFactory}の実装のクラス名、指定されていない場合は{@code null}。
 	 *
-	 * @return constraint validator factory class name
+	 * @return 制約バリデーターファクトリーのクラス名
 	 */
 	String getConstraintValidatorFactoryClassName();
 
 	/**
-	 * Class name of the {@link MessageInterpolator} implementation
-	 * or {@code null} if none is specified.
+         * {@link MessageInterpolator}の実装のクラス名、指定されていない場合は{@code null}。
 	 *
-	 * @return message interpolator class name or {@code null}
+	 * @return メッセージインターセプターのクラス名もしくは{@code null}
 	 */
 	String getMessageInterpolatorClassName();
 
 	/**
-	 * Class name of the {@link TraversableResolver} implementation
-	 * or {@code null} if none is specified.
+         * {@link TraversableResolver}の実装のクラス名、指定されていない場合は{@code null}。
 	 *
-	 * @return traversable resolver class name or {@code null}
+	 * @return 横断リゾルバのクラス名もしくは {@code null}
 	 */
 	String getTraversableResolverClassName();
 
 	/**
-	 * Class name of the {@link ParameterNameProvider} implementation
-	 * or {@code null} if none is specified.
+         * {@link ParameterNameProvider}の実装のクラス名、指定されていない場合は{@code null}。
 	 *
-	 * @return parameter name provider class name or {@code null}
+	 * @return パラメーター名プロバイダーのクラス名もしくは {@code null}
 	 */
 	String getParameterNameProviderClassName();
 
 	/**
-	 * Class name of the {@link ClockProvider} implementation or
-	 * {@code null} if none is specified.
+         * {@link ClockProvider}の実装のクラス名、指定されていない場合は{@code null}。
 	 *
-	 * @return clock provider class name or {@code null}
+	 * @return 時刻プロバイダーのクラス名もしくは {@code null}
 	 *
 	 * @since 2.0
 	 */
 	String getClockProviderClassName();
 
 	/**
-	 * Returns the class names of {@link ValueExtractor}s.
+         * {@link ValueExtractor}のクラス名を返します。
 	 *
-	 * @return the value extractor class names or an empty set if none are specified
+	 * @return 値エクストラクターのクラス名、指定されていない場合は空のセット
 	 * @since 2.0
 	 */
 	Set<String> getValueExtractorClassNames();
 
 	/**
-	 * Returns a set of resource paths pointing to XML constraint mapping files.
-	 * The set is empty if none are specified.
+         * XML制約マッピングファイルを指すリソースパスのセットを返します。
+         * 
+         * 指定されていない場合、セットは空です。
 	 *
-	 * @return set of constraint mapping resource paths
+	 * @return 制約マッピングリソースへのパスのセット
 	 */
 	Set<String> getConstraintMappingResourcePaths();
 
 	/**
-	 * Returns true if the validation execution is explicitly marked as enabled
-	 * or if it is left undefined.
+         * 検証の実行が明示的に有効と指定されている場合、もしくは検証を実行するかどうか未指定のままである場合はtrueを返します。
 	 *
-	 * @return whether validation execution is globally enabled
+	 * @return 検証の実行がグローバルで有効かどうか
 	 */
 	boolean isExecutableValidationEnabled();
 
 	/**
-	 * Returns the set of executable types that should be considered
-	 * unless explicitly overridden via {@link ValidateOnExecution}
+         * {@link ValidateOnExecution}で明示的にオーバーライドされない限り、考慮する必要がある実行可能な型のセットを返します。
 	 * <p>
-	 * Returns a set containing {@link ExecutableType#CONSTRUCTORS} and
-	 * {@link ExecutableType#NON_GETTER_METHODS} if unspecified in the configuration.
+         * 設定で指定されていない場合は、{@link ExecutableType#CONSTRUCTORS}と{@link ExecutableType#NON_GETTER_METHODS}を含むセットを返します。
 	 *
-	 * @return set of validated executable types
+	 * @return 検証された実行可能な型のセット
 	 */
 	Set<ExecutableType> getDefaultValidatedExecutableTypes();
 
 	/**
-	 * Returns properties as a map of string based key/value pairs.
-	 * The map is empty if no property has been specified.
+         * 文字列ベースのキーバリューペアのマップとしてプロパティを返します。
+         * 
+         * プロパティが指定されていない場合、マップは空です。
 	 *
-	 * @return the properties map
+	 * @return プロパティのマップ
 	 */
 	Map<String, String> getProperties();
 }
