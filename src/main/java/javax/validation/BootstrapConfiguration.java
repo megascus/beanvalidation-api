@@ -15,7 +15,7 @@ import javax.validation.spi.ValidationProvider;
 import javax.validation.valueextraction.ValueExtractor;
 
 /**
- * {@code META-INF/validation.xml} でユーザーが指定したデフォルトの構成を表します。
+ * {@code META-INF/validation.xml} でユーザーが指定したデフォルトの設定を表します。
  * <p>
  * 返されるオブジェクトへの変更は何も効果のないことに注意してください。
  * 代わりに{@link Configuration}に変更を適用するために{@link Configuration}で提供されているメソッドを使用します。

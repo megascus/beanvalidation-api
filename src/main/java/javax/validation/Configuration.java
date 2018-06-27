@@ -13,41 +13,35 @@ import javax.validation.valueextraction.ValueExtractor;
 import javax.validation.valueextraction.ValueExtractorDeclarationException;
 
 /**
- * Receives configuration information, selects the appropriate
- * Bean Validation provider and builds the appropriate {@link ValidatorFactory}.
+ * 設定情報を受け取り、適切なBean検証プロバイダの選択と適切な{@link ValidatorFactory}の構築を行います。
  * <p>
- * Usage:
+ * 使用方法:
  * <pre>
- * //provided by one of the Validation bootstrap methods
+ * //Validationの自動実行メソッドのひとつから提供される
  * Configuration&lt;?&gt; configuration =
  *     ValidatorFactory = configuration
  *         .messageInterpolator( new CustomMessageInterpolator() )
  *         .buildValidatorFactory();
  * </pre>
  * <p>
- * By default, the configuration information is retrieved from
- * {@code META-INF/validation.xml}.
- * It is possible to override the configuration retrieved from the XML file
- * by using one or more of the {@code Configuration} methods.
+ * デフォルトでは{@code META-INF/validation.xml}から設定情報が取得されます。
+ * {@code Configuration}のいくつかのメソッドを使用することでXMLファイルから受け取った設定を上書きすることが出来ます。
  * <p>
- * The {@link ValidationProviderResolver} is specified at configuration time
- * (see {@link ValidationProvider}).
- * If none is explicitly requested, the default {@code ValidationProviderResolver} is used.
+ * {@link ValidationProviderResolver}は設定時に指定されます。({@link ValidationProvider}を参照してください。)
+ * 明示的な要求がない場合はデフォルトの{@code ValidationProviderResolver}が使用されます。
  * <p>
- * The provider is selected in the following way:
+ * プロバイダーは次の方法で選択されます。
  * <ul>
- *     <li>if a specific provider is requested programmatically using
- *     {@link Validation#byProvider(Class)}, find the first provider implementing
- *     the provider class requested and use it</li>
- *     <li>if a specific provider is requested in {@code META-INF/validation.xml},
- *     find the first provider implementing the provider class requested and use it</li>
- *     <li>otherwise, use the first provider returned by the
- *     {@code ValidationProviderResolver}</li>
+ *     <li>{@link Validation#byProvider(Class)}を使用してプログラムで特定のプロバイダーが要求された場合、
+ *     要求されたプロバイダーのクラスで最初に見つかった実装クラスを使用します。</li>
+ *     <li>{@code META-INF/validation.xml}で特定のプロバイダーが要求された場合、
+ *     要求されたプロバイダーのクラスで最初に見つかった実装クラスを使用します。</li>
+ *     <li>それ以外の場合、{@code ValidationProviderResolver}で返された最初のプロバイダーを使用します。</li>
  * </ul>
  * <p>
- * Implementations are not meant to be thread-safe.
+ * 実装がスレッドセーフであるとは限りません。
  *
- * @param <T> the type of a provider-specific specialization of this contract
+ * @param <T> この契約に特化したプロバイダ提供の型
  *
  * @author Emmanuel Bernard
  * @author Gunnar Morling
