@@ -51,38 +51,35 @@ import javax.validation.valueextraction.ValueExtractorDeclarationException;
 public interface Configuration<T extends Configuration<T>> {
 
 	/**
-	 * Ignores data from the {@code META-INF/validation.xml} file if this
-	 * method is called.
+         * このメソッドを呼び出すことで{@code META-INF/validation.xml}ファイルからのデータを無視します。
 	 * <p>
-	 * This method is typically useful for containers that parse
-	 * {@code META-INF/validation.xml} themselves and pass the information
-	 * via the {@code Configuration} methods.
+         * このメソッドは通常、{@code META-INF/validation.xml}自体を解析し、{@code Configuration}のメソッドを介して情報を渡すコンテナで便利です。
 	 *
-	 * @return {@code this} following the chaining method pattern.
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 */
 	T ignoreXmlConfiguration();
 
 	/**
-	 * Defines the message interpolator used. Has priority over the configuration
-	 * based message interpolator.
+         * 使用されるメッセージインターポレーターを定義します。
+         * 
+         * 設定ベースのメッセージインターポレーターよりも優先されます。
 	 * <p>
-	 * If {@code null} is passed, the default message interpolator is used
-	 * (defined in XML or the specification default).
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトのメッセージインターセプターが使用されます。
 	 *
-	 * @param interpolator message interpolator implementation
-	 * @return {@code this} following the chaining method pattern
+	 * @param interpolator メッセージインターポレーターの実装
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 */
 	T messageInterpolator(MessageInterpolator interpolator);
 
 	/**
-	 * Defines the traversable resolver used. Has priority over the configuration
-	 * based traversable resolver.
+         * 使用される横断リゾルバを定義します。
+         * 
+         * 設定ベースの横断リゾルバよりも優先されます。
 	 * <p>
-	 * If {@code null} is passed, the default traversable resolver is used
-	 * (defined in XML or the specification default).
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの横断リゾルバが使用されます。
 	 *
-	 * @param resolver traversable resolver implementation
-	 * @return {@code this} following the chaining method pattern
+	 * @param resolver 横断リゾルバの実装
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 */
 	T traversableResolver(TraversableResolver resolver);
 
@@ -94,7 +91,7 @@ public interface Configuration<T extends Configuration<T>> {
 	 * (defined in XML or the specification default).
 	 *
 	 * @param constraintValidatorFactory constraint factory implementation
-	 * @return {@code this} following the chaining method pattern
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 */
 	T constraintValidatorFactory(ConstraintValidatorFactory constraintValidatorFactory);
 
@@ -106,7 +103,7 @@ public interface Configuration<T extends Configuration<T>> {
 	 * (defined in XML or the specification default).
 	 *
 	 * @param parameterNameProvider parameter name provider implementation
-	 * @return {@code this} following the chaining method pattern.
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 *
 	 * @since 1.1
 	 */
@@ -120,7 +117,7 @@ public interface Configuration<T extends Configuration<T>> {
 	 * (defined in XML or the specification default).
 	 *
 	 * @param clockProvider clock provider implementation
-	 * @return {@code this} following the chaining method pattern.
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 *
 	 * @since 2.0
 	 */
@@ -131,8 +128,8 @@ public interface Configuration<T extends Configuration<T>> {
 	 * type and type parameter detected through the service loader or given in
 	 * the XML configuration.
 	 *
-	 * @param extractor value extractor implementation
-	 * @return {@code this} following the chaining method pattern.
+	 * @param extractor 値エクストラクターの実装
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 * @throws ValueExtractorDeclarationException if more than one extractor for
 	 *         the same type and type parameter is added
 	 * @since 2.0
@@ -153,7 +150,7 @@ public interface Configuration<T extends Configuration<T>> {
 	 *        if it doesn't, it will be wrapped into a stream supporting the
 	 *        mark/reset contract by the Bean Validation provider
 	 *
-	 * @return {@code this} following the chaining method pattern
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 * @throws IllegalArgumentException if {@code stream} is null
 	 */
 	T addMapping(InputStream stream);
@@ -185,7 +182,7 @@ public interface Configuration<T extends Configuration<T>> {
 	 *
 	 * @param name property name
 	 * @param value property value
-	 * @return {@code this} following the chaining method pattern
+	 * @return メソッドチェーンパターンに従った {@code this}
 	 * @throws IllegalArgumentException if {@code name} is null
 	 */
 	T addProperty(String name, String value);

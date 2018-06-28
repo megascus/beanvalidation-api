@@ -45,7 +45,7 @@ public interface BootstrapConfiguration {
 	/**
          * {@link MessageInterpolator}の実装のクラス名、指定されていない場合は{@code null}。
 	 *
-	 * @return メッセージインターセプターのクラス名もしくは{@code null}
+	 * @return メッセージインターポレーターのクラス名もしくは{@code null}
 	 */
 	String getMessageInterpolatorClassName();
 
