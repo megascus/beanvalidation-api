@@ -84,25 +84,25 @@ public interface Configuration<T extends Configuration<T>> {
 	T traversableResolver(TraversableResolver resolver);
 
 	/**
-	 * Defines the constraint validator factory. Has priority over the configuration
-	 * based constraint factory.
+         * 使用される制約バリデーターファクトリーを定義します。
+         * 
+         * 設定ベースの制約バリデーターファクトリーよりも優先されます。
 	 * <p>
-	 * If {@code null} is passed, the default constraint validator factory is used
-	 * (defined in XML or the specification default).
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの制約バリデーターファクトリーが使用されます。
 	 *
-	 * @param constraintValidatorFactory constraint factory implementation
+	 * @param constraintValidatorFactory 制約バリデーターファクトリーの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
 	 */
 	T constraintValidatorFactory(ConstraintValidatorFactory constraintValidatorFactory);
 
 	/**
-	 * Defines the parameter name provider. Has priority over the configuration
-	 * based provider.
+         * 使用されるパラメーター名プロバイダーを定義します。
+         * 
+         * 設定ベースのパラメーター名プロバイダーよりも優先されます。
 	 * <p>
-	 * If {@code null} is passed, the default parameter name provider is used
-	 * (defined in XML or the specification default).
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトのパラメーター名プロバイダーが使用されます。
 	 *
-	 * @param parameterNameProvider parameter name provider implementation
+	 * @param parameterNameProvider パラメーター名プロバイダーの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
 	 *
 	 * @since 1.1
@@ -110,13 +110,13 @@ public interface Configuration<T extends Configuration<T>> {
 	T parameterNameProvider(ParameterNameProvider parameterNameProvider);
 
 	/**
-	 * Defines the clock provider. Has priority over the configuration
-	 * based provider.
+         * 使用される時刻プロバイダーを定義します。
+         * 
+         * 設定ベースの時刻プロバイダーよりも優先されます。
 	 * <p>
-	 * If {@code null} is passed, the default clock provider is used
-	 * (defined in XML or the specification default).
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの時刻プロバイダーが使用されます。
 	 *
-	 * @param clockProvider clock provider implementation
+	 * @param clockProvider 時刻プロバイダーの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
 	 *
 	 * @since 2.0
