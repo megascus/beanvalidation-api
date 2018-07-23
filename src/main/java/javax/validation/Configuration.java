@@ -51,20 +51,20 @@ import javax.validation.valueextraction.ValueExtractorDeclarationException;
 public interface Configuration<T extends Configuration<T>> {
 
 	/**
-     * このメソッドを呼び出すことで{@code META-INF/validation.xml}ファイルからのデータを無視します。
+         * このメソッドを呼び出すことで{@code META-INF/validation.xml}ファイルからのデータを無視します。
 	 * <p>
-     * このメソッドは通常、{@code META-INF/validation.xml}自体を解析し、{@code Configuration}のメソッドを介して情報を渡すコンテナで便利です。
+         * このメソッドは通常、{@code META-INF/validation.xml}自体を解析し、{@code Configuration}のメソッドを介して情報を渡すコンテナで便利です。
 	 *
 	 * @return メソッドチェーンパターンに従った {@code this}
 	 */
 	T ignoreXmlConfiguration();
 
 	/**
-     * 使用されるメッセージインターポレーターを定義します。
-     * 
-     * 設定ベースのメッセージインターポレーターよりも優先されます。
+         * 使用されるメッセージインターポレーターを定義します。
+         * 
+         * 設定ベースのメッセージインターポレーターよりも優先されます。
 	 * <p>
-     * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトのメッセージインターセプターが使用されます。
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトのメッセージインターセプターが使用されます。
 	 *
 	 * @param interpolator メッセージインターポレーターの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
@@ -72,11 +72,11 @@ public interface Configuration<T extends Configuration<T>> {
 	T messageInterpolator(MessageInterpolator interpolator);
 
 	/**
-     * 使用される横断リゾルバを定義します。
-     * 
-     * 設定ベースの横断リゾルバよりも優先されます。
+         * 使用される横断リゾルバを定義します。
+         * 
+         * 設定ベースの横断リゾルバよりも優先されます。
 	 * <p>
-     * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの横断リゾルバが使用されます。
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの横断リゾルバが使用されます。
 	 *
 	 * @param resolver 横断リゾルバの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
@@ -84,11 +84,11 @@ public interface Configuration<T extends Configuration<T>> {
 	T traversableResolver(TraversableResolver resolver);
 
 	/**
-     * 使用される制約バリデーターファクトリーを定義します。
-     * 
-     * 設定ベースの制約バリデーターファクトリーよりも優先されます。
+         * 使用される制約バリデーターファクトリーを定義します。
+         * 
+         * 設定ベースの制約バリデーターファクトリーよりも優先されます。
 	 * <p>
-     * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの制約バリデーターファクトリーが使用されます。
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの制約バリデーターファクトリーが使用されます。
 	 *
 	 * @param constraintValidatorFactory 制約バリデーターファクトリーの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
@@ -96,11 +96,11 @@ public interface Configuration<T extends Configuration<T>> {
 	T constraintValidatorFactory(ConstraintValidatorFactory constraintValidatorFactory);
 
 	/**
-     * 使用されるパラメーター名プロバイダーを定義します。
-     * 
-     * 設定ベースのパラメーター名プロバイダーよりも優先されます。
+         * 使用されるパラメーター名プロバイダーを定義します。
+         * 
+         * 設定ベースのパラメーター名プロバイダーよりも優先されます。
 	 * <p>
-     * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトのパラメーター名プロバイダーが使用されます。
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトのパラメーター名プロバイダーが使用されます。
 	 *
 	 * @param parameterNameProvider パラメーター名プロバイダーの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
@@ -110,11 +110,11 @@ public interface Configuration<T extends Configuration<T>> {
 	T parameterNameProvider(ParameterNameProvider parameterNameProvider);
 
 	/**
-     * 使用される時刻プロバイダーを定義します。
-     * 
-     * 設定ベースの時刻プロバイダーよりも優先されます。
+         * 使用される時刻プロバイダーを定義します。
+         * 
+         * 設定ベースの時刻プロバイダーよりも優先されます。
 	 * <p>
-     * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの時刻プロバイダーが使用されます。
+         * {@code null}が渡された場合、(XML内で定義されたものもしくは仕様のデフォルトによる)デフォルトの時刻プロバイダーが使用されます。
 	 *
 	 * @param clockProvider 時刻プロバイダーの実装
 	 * @return メソッドチェーンパターンに従った {@code this}
